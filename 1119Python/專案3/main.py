@@ -10,11 +10,12 @@ class Window(tk.Tk):
 
         # 建立存放按鈕的容器
         buttons_frame = tk.Frame(
-            self, background="#555", width=200, height=300)
-        buttons_frame.pack()
+            self, background="#FFF", width=1200, height=500)
+        buttons_frame.pack(padx=80, pady=(0, 30))
 
-        for key in cities_dict:
-            tk.Button(buttons_frame, text=key).pack(side=tk.LEFT)
+        for index, key in enumerate(cities_dict):
+            tk.Button(buttons_frame, text=key, font=('arial', 15),
+                      padx=20, pady=5).grid(row=index % 3, column=index // 3)
 
 
 def main():
