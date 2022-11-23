@@ -38,7 +38,8 @@ def get_forcast_data(cityName,api_key):
         # print(response.text)
         return response.json()['list']
     else:
-        print("下載失敗")
+        # print("下載失敗")
+        raise Exception("下載失敗")
 
 
 # url 瀏覽器開啟 json code copy to online json viewer
