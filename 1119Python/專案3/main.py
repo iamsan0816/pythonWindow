@@ -1,10 +1,10 @@
 import datasource as ds
-
+from secrets import api_key
 
 def main():
     # print("這裏是main function")
     # all_data = datasource.get_forcast_data()
-    list_data = ds.get_forcast_data(ds.tw_county_names["基隆"])
+    list_data = ds.get_forcast_data(ds.tw_county_names["基隆"],api_key)
     # print(type(all_data))
     for item in list_data:
         print(item['dt_txt'])
