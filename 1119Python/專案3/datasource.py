@@ -1,6 +1,7 @@
 # 自訂的module (模組) 下載資料和處理資料
 # pipy 成千上萬的套件可以使用  reuests
 import requests
+import secrets
 tw_county_names = {"台北": "Taipei",
                    "台中": "Taichung",
                    "基隆": "Keelung",
@@ -23,7 +24,7 @@ tw_county_names = {"台北": "Taipei",
                    "連江": "Lienchiang"
                    }
 
-api_key = "6c88d8b593da55e5d8bf61855950dee6"
+
 cityName = "Taipei"
 
 def get_forcast_data(cityName):
